@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://npmcdn.com/flatpickr/dist/l10n/uk.js"></script>
+    <script src="config.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Marck+Script&family=Ruslan+Display&display=swap');
 
@@ -260,6 +261,33 @@
             transform: scale(1.2);
         }
 
+        .shop-links {
+            margin-top: 20px;
+            display: grid;
+            gap: 10px;
+        }
+
+        .shop-link {
+            display: block;
+            padding: 13px 16px;
+            border-radius: 12px;
+            color: #ffe88f;
+            text-decoration: none;
+            border: 1px solid rgba(255, 215, 0, .55);
+            background: linear-gradient(180deg, rgba(123,44,191,.45), rgba(63,20,103,.58));
+            box-shadow: 0 0 12px rgba(157, 78, 221, .4);
+            text-align: center;
+            font-size: clamp(16px, 2.2vw, 21px);
+            font-weight: 700;
+            transition: transform .18s ease, box-shadow .18s ease;
+            touch-action: manipulation;
+        }
+
+        .shop-link:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 0 18px rgba(255, 215, 0, .45);
+        }
+
         .audio-control {
             position: fixed;
             top: 20px;
@@ -462,6 +490,20 @@
                 z-index: 1001;
             }
 
+            .shop-links {
+                margin-top: 30px;
+                gap: 12px;
+            }
+
+            .shop-link {
+                padding: 16px 20px;
+                font-size: clamp(15px, 4vw, 18px);
+                min-height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
             #result {
                 font-size: clamp(16px, 4vw, 20px);
                 padding: 10px;
@@ -542,6 +584,9 @@
             .chertog-item,
             .modal,
             .modal-img,
+            .shop-link {
+                will-change: transform;
+            }
         }
 
         /* Мобильные телефоны (≤480px) */
@@ -618,7 +663,16 @@
                 font-size: 15px;
             }
 
-            .modal-content
+            .modal-content .shop-links {
+                margin-top: 25px;
+            }
+
+            .shop-link {
+                padding: 14px 16px;
+                font-size: 15px;
+                border-radius: 10px;
+                min-height: 48px;
+            }
 
             .close-btn {
                 top: 5px;
@@ -676,6 +730,11 @@
 
             .modal-content {
                 padding: 12px 10px;
+                font-size: 14px;
+            }
+
+            .shop-link {
+                padding: 12px 14px;
                 font-size: 14px;
             }
         }
@@ -773,7 +832,9 @@
             id="modalText"></div>
     </div>
 
-    <script src="app.min.js"></script>
+    
+    
+  <script src="app.min.js"></script>
 </body>
 
 </html>
