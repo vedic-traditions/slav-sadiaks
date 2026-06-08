@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://npmcdn.com/flatpickr/dist/l10n/uk.js"></script>
     <link rel="icon" href="data:,">
+    <link rel="preload" href="chertogs/Kolo.webp?v=1.1" as="image">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Marck+Script&family=Ruslan+Display&display=swap');
 
@@ -37,8 +38,9 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('chertogs/Kolo.webp') no-repeat center center / cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('chertogs/Kolo.webp?v=1.1') no-repeat center center / cover;
             z-index: -2;
+            will-change: transform;
         }
 
         .header {
